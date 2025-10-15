@@ -23,7 +23,7 @@ exports.updateProduct = async (req, res) => {
   try {
     result = await ProductService.update(req.params.id, req.body);
 
-    if (!result) {
+    if (result == "productnotfound") {
       return res
         .status(statusCode.notFound)
         .json(failAction(statusCode.notFound, result, message.productNotFound));
@@ -45,7 +45,7 @@ exports.deleteProduct = async (req, res) => {
   try {
     result = await ProductService.delete(req.params.id);
 
-    if (!result) {
+    if (result == "productnotfound") {
       return res
         .status(statusCode.notFound)
         .json(failAction(statusCode.notFound, result, message.productNotFound));

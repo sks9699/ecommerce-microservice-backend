@@ -15,6 +15,7 @@ module.exports = {
   update: async (id, body) => {
     try {
       const product = await Product.findByIdAndUpdate(id, body, { new: true });
+      if(!product) return "productnotfound"
       return product; // returns null if not found
     } catch (error) {
       console.error("Error in update product:", error);
@@ -25,6 +26,7 @@ module.exports = {
   delete: async (id) => {
     try {
       const product = await Product.findByIdAndDelete(id);
+      if(!product) return "productnotfound"
       return product; // returns null if not found
     } catch (error) {
       console.error("Error in delete product:", error);

@@ -23,7 +23,7 @@ exports.updateOrderStatus = async (req, res) => {
   try {
     result = await AdminService.updateOrderStatus(req.params.id, req.body.status);
 
-    if (!result) {
+    if (result =="ordernotexist") {
       return res
         .status(statusCode.notFound)
         .json(failAction(statusCode.notFound, result, message.orderNotFound));

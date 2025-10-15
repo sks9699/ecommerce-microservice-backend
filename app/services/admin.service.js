@@ -25,7 +25,7 @@ module.exports = {
   updateOrderStatus: async (orderId, status) => {
     try {
       const order = await Order.findById(orderId);
-      if (!order) return null;
+      if (!order) return "ordernotexist";
 
       order.status = status;
       await order.save();
