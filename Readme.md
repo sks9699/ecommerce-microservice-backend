@@ -154,7 +154,6 @@ Authorization: Bearer <your_token>
 ### 🔹 Cart Routes
 | Method | Endpoint                     | Description             |
 |--------|------------------------------|-------------------------|
-
 | POST   | `/api/cart/items`            | Add or update cart item |
 | DELETE | `/api/cart/items/:productId` | Remove item from cart   |
 | GET    | `/api/cart/getallcartsItems`     | Get all Cart items   |
