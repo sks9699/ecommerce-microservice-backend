@@ -120,7 +120,7 @@ npm start
 ```
 
 The server will start at:  
-👉 **[http://localhost:3000](http://localhost:3000)**
+👉 **[http://localhost:3001](http://localhost:3001)**
 
 ---
 
