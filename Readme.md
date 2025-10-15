@@ -1,8 +1,4 @@
-The provided `README.md` is well-structured, professional, and suitable for GitHub or submission use. However, there are a few minor inconsistencies and improvements that can be made to enhance clarity, consistency, and correctness. Below is the fixed and polished version of the `README.md`, addressing potential issues like inconsistent port references, formatting, and minor clarifications. I've also ensured the project structure diagram is clear and consistent with the description.
 
----
-
-```markdown
 # 🛍️ E-Commerce Backend API – Resolute Solution Assignment
 
 A robust and modular **E-Commerce Backend API** built using **Node.js**, **Express**, and **MongoDB (Mongoose)**.  
