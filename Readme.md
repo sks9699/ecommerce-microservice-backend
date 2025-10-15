@@ -146,10 +146,10 @@ Authorization: Bearer <your_token>
 ### 🔹 Product Routes (Admin Only)
 | Method | Endpoint            | Description        |
 |--------|---------------------|--------------------|
-| POST   | `/api/products`     | Create new product |
-| GET    | `/api/products`     | Get all products   |
-| PUT    | `/api/products/:id` | Update product     |
-| DELETE | `/api/products/:id` | Delete product     |
+| POST   | `/api/products/create`     | Create new product |
+| GET    | `/api/products/allproduct`     | Get all products   |
+| PUT    | `/api/products/update/:id` | Update product     |
+| DELETE | `/api/products/delete/:id` | Delete product     |
 
 ### 🔹 Cart Routes
 | Method | Endpoint                     | Description             |
@@ -157,13 +157,14 @@ Authorization: Bearer <your_token>
 | GET    | `/api/cart`                  | View cart               |
 | POST   | `/api/cart/items`            | Add or update cart item |
 | DELETE | `/api/cart/items/:productId` | Remove item from cart   |
+| GET    | `/api/cart/getallcartsItems`     | Get all Cart items   |
 
 ### 🔹 Orders Routes
 | Method | Endpoint               | Description               |
 |--------|------------------------|---------------------------|
 | POST   | `/api/orders/checkout` | Checkout and create order |
 | POST   | `/api/orders/:id/pay`  | Mark order as paid        |
-| GET    | `/api/orders`          | Get all user orders       |
+| GET    | `/api/orders/allorder`          | Get all user orders       |
 | GET    | `/api/orders/:id`      | Get specific order by ID  |
 
 ### 🔹 Admin Routes
