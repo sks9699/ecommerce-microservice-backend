@@ -23,7 +23,7 @@ exports.payOrder = async (req, res) => {
   try {
     result = await OrderService.pay(req.params.id);
 
-    if (!result) {
+    if (result=="ordernotfound") {
       return res
         .status(statusCode.notFound)
         .json(failAction(statusCode.notFound, result, message.orderNotFound));
@@ -61,7 +61,7 @@ exports.getOrderById = async (req, res) => {
   try {
     result = await OrderService.getOrderById(req.user.id, req.params.id);
 
-    if (!result) {
+    if (result=="ordernotfound") {
       return res
         .status(statusCode.notFound)
         .json(failAction(statusCode.notFound, result, message.orderNotFound));

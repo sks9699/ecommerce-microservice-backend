@@ -1,7 +1,7 @@
 const ProductController = require("../controllers/products.controller.js");
 const authMiddleware = require("../middleware/auth.middleware.js");
 const adminAuthMiddleware = require("../middleware/admin.middleware.js")
-const roleMiddleware = require("../middleware/role.middleware.js");
+// const roleMiddleware = require("../middleware/role.middleware.js");
 const { validationMiddleware } = require("../validators/Joi.validator.js");
 
 

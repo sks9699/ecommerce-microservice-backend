@@ -119,7 +119,7 @@ checkout: async (userId) => {
 
     try {
       const order = await Order.findById(orderId).populate("items.productId");
-      if (!order || order.status !== "PENDING_PAYMENT") return null;
+      if (!order || order.status !== "PENDING_PAYMENT") return "ordernotfound";
 
       // Clear reserved stock
       for (let item of order.items) {
@@ -174,6 +174,7 @@ checkout: async (userId) => {
       const order = await Order.findOne({ _id: orderId, userId }).populate(
         "items.productId"
       );
+      if(!order) return "ordernotfound"
       return order; // returns null if not found
     } catch (error) {
       console.error("Get Order By ID Error:", error);

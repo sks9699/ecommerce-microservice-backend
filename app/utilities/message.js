@@ -28,6 +28,8 @@ const message = {
     userExist:"User with same Detail exist already",
     UserNotExist:"User Not exist ",
       success: "User created successfully",
+      orderNotFound:"Order Not Found",
+      productNotFound : "Product not found"
 }
 
 module.exports = {statusCode,message}
