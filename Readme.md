@@ -108,9 +108,10 @@ npm install
 Create a `.env` file in the project root and add the following:
 
 ```env
-MONGO_URI=mongodb://localhost:27017/ecommerce
-JWT_SECRET=your_secret_key
-PORT=5000
+PORT = 3001
+MONGODB_URI = mongodb+srv://physcologic6666_db_user:abc@securly.bibzkzw.mongodb.net
+JWT_SECRET= resolutesolution
+PORT = 3001
 ```
 
 ### 4. Run the Application
