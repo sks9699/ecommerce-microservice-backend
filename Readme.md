@@ -95,7 +95,7 @@ This project demonstrates authentication, authorization, role-based access, orde
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/ecommerce-backend.git
+git clone https://github.com/sks9699/ecommerce-microservice-backend.git
 cd ecommerce-backend
 ```
 
