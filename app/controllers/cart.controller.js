@@ -5,7 +5,7 @@ const { successAction, failAction } = require("../utilities/response");
 exports.viewCart = async (req, res) => {
   let result = "";
   try {
-    result = await CartService.view(req.user.id);
+    result = await CartService.view(req,req.user.id);
 
     return res
       .status(statusCode.success)

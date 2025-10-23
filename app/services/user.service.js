@@ -15,7 +15,7 @@ module.exports = {
       const createdUser = await User.create({ ...userData, password: hashedPassword });
       return createdUser;
     } catch (error) {
-      console.error("Error in register:", error);
+      console.error("Error in register:", error);N
       throw new Error(error.message || "Failed to create user");
     }
   },
