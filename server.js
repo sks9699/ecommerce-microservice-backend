@@ -6,6 +6,11 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 const connect = require("./app/config/database")
 
+const cron = require("node-cron");
+const OrderService = require("./app/services/order.service");
+
+
+
 app.use(cors())
 
 app.use(bodyParser.json({
@@ -17,6 +22,11 @@ app.use(bodyParser.urlencoded({
     extended:true
 }))
 const db = connect();
+
+// Run every minute
+cron.schedule("* * * * *", async () => {
+  await OrderService.cancelUnpaidOrders();
+});
 
 require("./app/routes/auth.route")(app);
 require("./app/routes/product.route")(app);
